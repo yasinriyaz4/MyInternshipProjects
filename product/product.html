@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        .product-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-description {
+            margin-top: 1rem;
+        }
+        .cart-button {
+            display: block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+        .cart-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>E-commerce Product Page</h1>
+    </header>
+
+    <div class="product-container">
+        <img class="product-image"  src="/Users/riyazahamed/Downloads/product/bat.jpg" alt="Product Image">
+        <h2>MRF VIRAT KHOLI VK18 English Willow Full Size Short Handle Cricket BAT</h2>
+	<h4>About this item</h4>
+		
+        <p class="product-description">
+		<ul>
+		<li>Bat Size :- Full Size , Blade Made of English Willow with 4 to 6 grains</li>
+<li>Handle Material :- Singapore Full Kane Handle</li>
+	<li>Handle Grip Type :-High-quality Pyramid designed Rubber Grip</li>
+<li>Age Group:- 15+ Yrs ,Weight : -1080-1250 grams</li>
+ <li>Playing Level - All ,Color -Assorted</li>
+	 <li>Item Dimensions L x W x H - 81.3 x 10.8 x 6.7 Centimeters </li>
+
+</ul>
+
+
+
+</p>
+        <p>Price: ₹2,999</p>
+       <button onclick="addToCart()">Add to Cart</button>
+        <a href="#" class="cart-button" onclick="viewCart()">View Cart</a>
+    </div>
+
+    <script>
+        // Sample JavaScript for basic cart functionality
+        let cart = [];
+
+        function addToCart() {
+            // In a real scenario, you would add the selected product to the cart array
+            // For simplicity, let's assume the product is represented by an object
+            const product = {
+                name: 'Product Name',
+                price: 19.99,
+            };
+            cart.push(product);
+            alert('Product added to cart!');
+        }
+
+        function viewCart() {
+            // In a real scenario, you would navigate to the cart page or display a modal with cart contents
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+            } else {
+                alert('Cart contains: ' + cart.map(product => product.name).join(', '));
+            }
+        }
+    </script>
+
+</body>
+</html>
+
